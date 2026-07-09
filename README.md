@@ -37,4 +37,4 @@ Para desplegar el entorno de desarrollo local, asegúrate de contar con:
 ## Instalación y Configuración
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-organizacion/sigsm.git](https://github.com/tu-organizacion/sigsm.git)
+   git clone [https://github.com/BGH-solutions/Proyecto-BGH.git](https://github.com/BGH-solutions/Proyecto-BGH.git)
