@@ -30,6 +30,10 @@ Este proyecto consiste en un módulo desarrollado para el Hospital de Clínicas,
 Para desplegar el entorno de desarrollo local, asegúrate de contar con:
 * [Git](https://git-scm.com/).
 * [Visual Studio Code](https://code.visualstudio.com/).
+* [PHP 8.2.12](https://www.php.net).
+* [XAMPP 8.2.12](https://www.apachefriends.org/es/download.html).
+* [MySQL](https://www.mysql.com).
+* [Bootstrap](https://getbootstrap.com).
 
 ---
 
