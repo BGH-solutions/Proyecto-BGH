@@ -7,7 +7,6 @@ Este proyecto consiste en un módulo desarrollado para el Hospital de Clínicas,
 - [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 - [Requisitos Previos](#-requisitos-previos)
 - [Instalación y Configuración](#-instalación-y-configuración)
-- [Convenciones de Commits](#-convenciones-de-commits)
 
 ---
 
