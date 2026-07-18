@@ -43,5 +43,5 @@ Para desplegar el entorno de desarrollo local, asegúrate de contar con:
    git clone https://github.com/BGH-solutions/Proyecto-BGH.git
    
 2. **Instalación y Configuración:**
-  * [Click aqui](Configutacion del entorno de desarrollo.pdf).
+  * [Click aqui](../Documentación/Configutacion del entorno de desarrollo.pdf).
 
