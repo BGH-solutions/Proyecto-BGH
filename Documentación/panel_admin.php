@@ -2,7 +2,6 @@
 
 // esta página solo va a verla el administrador , o sea, alguien con rol 4
 
-
 // inicia la sesión para poder confirmar qué persona está conectada
 session_start();
 
