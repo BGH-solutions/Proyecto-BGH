@@ -127,4 +127,5 @@ $categorias = $conexion
     <a href="documentos.php">Cancelar</a>
 
 </body>
+    
 </html>
