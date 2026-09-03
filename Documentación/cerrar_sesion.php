@@ -4,7 +4,6 @@
 //de nuevo al login, session_destroy() borra los datos de sesión del servidor
 
 
-
 // inicia la sesión actual para poder borrarla
 session_start();
 
