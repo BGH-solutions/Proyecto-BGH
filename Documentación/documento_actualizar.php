@@ -6,6 +6,7 @@
 require_once "proteger.php";
 require_once "conexion.php";
 
+
 // solo el admin puede actualizar documentos
 if ((int) $_SESSION["id_rol"] !== 4) {
     http_response_code(403);
