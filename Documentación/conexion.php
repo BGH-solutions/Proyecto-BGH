@@ -1,6 +1,7 @@
 <?php
 //conexion.php sirve para crear la conexión con MySQL
 
+
 // datos del servidor local de base de datos.
 $host = "localhost";
 $base_datos = "hospital_sistema";
