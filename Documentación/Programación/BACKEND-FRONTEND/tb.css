@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    background-color: #e5e5e5;
+    font-family: Arial, sans-serif;
+}
+.logo{
+    height: 80%;
+    width: auto;
+}
+
+.imagen{
+    width: 10%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo{
+    text-align: center;
+    font-size:25px;
+    font-weight: bold;
+    padding-top: 40px;
+    margin-bottom: 25px;
+    color: #213841;
+}
+
+.st{
+    text-align: center;
+    font-size:18px;
+    font-weight: bold;
+    padding-top: 40px;
+    margin-bottom: 25px;
+    color: #0c1316;
+}
+
+
+.header {
+    height: 130px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.usuario {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.menu > ul {
+    list-style-type: none;
+    height: 82px;
+    background-color: #d0d0d0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > ul > li {
+    float: left;
+    width: 50%;
+    height: 82px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82px;
+    font-weight: bold;
+}
+
+.menu > ul > li:hover,
+.menu > ul > li.active {
+    background-color: #e5e5e5;
+}
+
+.contenido {
+    max-width: 1225px;
+    margin: 75px auto 0;
+}
+
+
+
+.filtro {
+    text-align: right;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.filtro i {
+    margin-left: 8px;
+}
+
+
+.tabla-container {
+    min-height: 580px;
+    background-color: #d9d9d9;
+}
+
+.tabla-documentos {
+    width: 100%;
+   
+    background-color: #d9d9d9;
+    border-collapse: collapse;
+}
+
+.tabla-documentos th,
+.tabla-documentos td {
+    padding: 12px;
+    vertical-align: top; 
+}
+
+.tabla-documentos th {
+    background-color: #c7c7c7;
+    text-align: left;
+    border-right: 2px solid #777;
+}
+
+.tabla-documentos td {
+    border-right: 2px solid #777;
+}
+
+.botones {
+    margin-top: 20px;
+    display: flex;
+    gap: 28px;
+}
+
+.boton {
+    background-color: #65bde5;
+    color: #111;
+    border: none;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: 20px;
+    min-width: 255px;
+}
+
+.boton:hover {
+    background-color: #4eafd9;
+}
+
+.modal-overlay {
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  justify-content: center; 
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.form-group { 
+  margin-bottom: 15px; 
+}
+
+.form-group label { 
+  display: block; 
+  margin-bottom: 5px; 
+}
+
+.form-group input, 
+.form-group select { 
+  width: 100%; 
+  padding: 8px; 
+  box-sizing: border-box; 
+}
+
+.modal-actions { 
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 10px; 
+}
+
+.btn-cancelar { 
+  background: #6c757d; 
+  color: white; 
+  border: none; 
+  padding: 8px 12px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.btn-guardar { 
+  background: #28a745; 
+  color: white; 
+  border: none; 
+  padding: 8px 12px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+
+/* ===== Estilos de la página de Encuesta ===== */
+
+/* Margen lateral en pantallas chicas (el centrado y el ancho máximo vienen de .contenido arriba) */
+.contenido { padding-left: 20px; padding-right: 20px; }
+
+/* Cuadrículas */
+.grilla   { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grilla-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 768px) { .grilla, .grilla-4 { grid-template-columns: 1fr; } }
+
+/* Paneles grises */
+.panel { background: #d9d9d9; padding: 20px; min-height: 170px; display: flex; align-items: center; gap: 16px; }
+.panel.col { flex-direction: column; align-items: stretch; }
+
+/* Botones "Encuesta de satisfacción N" */
+.btn-enc { background: #d9d9d9; border: 1px solid transparent; border-radius: 0; padding: 1.2rem; font-size: 1rem; }
+.btn-enc.active { background: #bdbdbd; border-color: #333; }
+
+/* Contenedor de los gráficos (Chart.js necesita altura fija) */
+.chart-box { position: relative; height: 180px; flex: 1; min-width: 0; }
+
+#comentarios li { margin-bottom: .4rem; }
+
+.header.header-login { justify-content: center; }
+ 
+/* Fondo gris claro bajo el header */
+.login-main {
+    background-color: #eeefee;
+    min-height: calc(100vh - 130px);
+    padding: 90px 20px;
+}
+ 
+/* Tarjeta blanca */
+.login-card {
+    background-color: white;
+    max-width: 603px;
+    margin: 0 auto;
+    padding: 35px 52px 38px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+ 
+.login-card .titulo {
+    padding-top: 0;
+    margin-bottom: 35px;
+    font-size: 26px;
+    font-weight: 500;
+    color: #111;
+}
+ 
+.login-card label {
+    display: block;
+    font-size: 22px;
+    color: #111;
+    margin-bottom: 8px;
+}
+ 
+.login-card input {
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 0;
+    background-color: #efefef;
+    padding: 0 10px;
+    font-size: 18px;
+    margin-bottom: 38px;
+    box-sizing: border-box;
+}
+ 
+.login-card input:focus {
+    outline: 2px solid #65bde5;
+    background-color: #f5f5f5;
+}
+ 
+.login-card .btn-ingresar {
+    display: block;
+    width: calc(100% - 52px);
+    margin: 52px auto 0;
+    height: 36px;
+    border: none;
+    border-radius: 0;
+    background-color: #7dc4e8;
+    color: #111;
+    font-size: 22px;
+    cursor: pointer;
+}
+ 
+.login-card .btn-ingresar:hover { background-color: #4eafd9; }
+ 
+.login-card .error {
+    color: #b00020;
+    text-align: center;
+    margin: -20px 0 0;
+    min-height: 22px;
+    font-size: 16px;
+}
+
+/* =====================================================================
+   AJUSTES AGREGADOS: diseño adaptable a celular, tablas, QR, impresión
+   y accesibilidad. Todo lo anterior se mantiene igual; esto solo
+   corrige y complementa (no se tocó ningún archivo PHP ni SQL).
+   ===================================================================== */
+
+/* --- Logo: el enlace que lo envuelve ocupa todo el alto del encabezado,
+       así el 80% de .logo se calcula bien y no se agranda el logo --- */
+.header > a { display: flex; align-items: center; height: 100%; }
+.header .logo { max-width: 60vw; object-fit: contain; }
+
+/* --- Tablas --- */
+/* las celdas de acciones usan la clase d-flex de Bootstrap: vuelven a ser celdas de tabla */
+.tabla-documentos td.d-flex { display: table-cell !important; }
+.tabla-documentos td .btn { margin: 0 4px 4px 0; }
+.tabla-documentos td form { display: inline-block; vertical-align: top; }
+.tabla-documentos td { overflow-wrap: break-word; }
+/* si la tabla no entra en pantalla, se desliza de costado en vez de romper la página */
+.tabla-container { overflow-x: auto; }
+/* texto atenuado (documentos dados de baja) con contraste suficiente sobre el gris */
+.tabla-container .text-muted { color: #4a5258 !important; }
+
+/* --- Botones inferiores: si no entran, pasan a la línea siguiente --- */
+.botones { flex-wrap: wrap; }
+
+/* --- Código QR: se achica si la pantalla es angosta --- */
+#qr img, #qr canvas { max-width: 100%; height: auto; }
+
+/* --- Accesibilidad: se ve claramente qué elemento tiene el foco al navegar con teclado --- */
+a:focus-visible, button:focus-visible, .btn:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid #0088cc;
+    outline-offset: 2px;
+}
+.menu a:focus-visible { outline-offset: -4px; }
+
+/* --- Impresión (por ejemplo, imprimir un código QR) --- */
+@media print {
+    body { background: #fff; }
+    .header, .menu, .botones, .dropdown, .alert { display: none !important; }
+    .contenido { margin-top: 0; max-width: 100%; }
+    .card { border: 0; box-shadow: none; }
+}
+
+/* --- Tablet y celular --- */
+@media (max-width: 768px) {
+    .header { height: 90px; padding: 0 16px; }
+    .usuario { gap: 12px; font-size: 14px; }
+
+    .menu > ul,
+    .menu > ul > li,
+    .menu a { height: 56px; }
+
+    .contenido { margin-top: 24px; }
+    .titulo { font-size: 22px; padding-top: 24px; margin-bottom: 16px; }
+
+    .tabla-container { min-height: 0; }
+    .tabla-documentos th,
+    .tabla-documentos td { padding: 8px; font-size: 14px; }
+    .tabla-documentos .btn { min-height: 38px; }   /* botones más fáciles de tocar */
+
+    .botones { gap: 12px; }
+    .boton { min-width: 0; width: 100%; font-size: 18px; padding: 12px 16px; }
+
+    /* paneles con gráficos: en columna, y el gráfico necesita alto propio */
+    .panel { flex-direction: column; align-items: stretch; }
+    .panel > p[style*="width"] { width: auto !important; }
+    .chart-box { flex: none; width: 100%; height: 200px; }
+    .btn-enc { padding: 0.9rem; }
+
+    .imagen { width: 35%; }
+
+    /* inicio de sesión y registro */
+    .login-main { padding: 32px 14px; }
+    .login-card { padding: 24px 18px 28px; }
+    .login-card .titulo { font-size: 22px; margin-bottom: 24px; }
+    .login-card label { font-size: 18px; }
+    .login-card input { margin-bottom: 24px; }
+    .login-card .btn-ingresar { width: 100%; margin-top: 32px; }
+}
+
+/* --- Celulares chicos --- */
+@media (max-width: 480px) {
+    .usuario span:first-child { display: none; }   /* se oculta el rol para que entre el nombre */
+    .filtro { justify-content: flex-start !important; }
+}
